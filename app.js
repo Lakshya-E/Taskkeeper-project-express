@@ -40,33 +40,29 @@ const express = require('express');
 
 const serverless = require('serverless-http');
 
+const port = process.env.PORT || 8000;
+
 const app = express();
 
-const router = express.Router();
+// const router = express.Router();
 
 app.use(express.static('dist/views'));
 app.use(express.static('JS'));
 
-router.get('/', (req, res) => {
-    // res.json({
-    //     'hello': 'hi',
-    // })
+app.get('/', (req, res) => {
     res.sendFile('dist/index.html', { root: __dirname });
 })
 
-router.get('/login', (req, res) => {
-    res.json({
-            'hello': 'login',
-        })
-        // res.sendFile('login.html', { root: __dirname });
+app.get('/login', (req, res) => {
+    res.sendFile('dist/login.html', { root: __dirname });
 })
 app.get('/signup', (req, res) => {
-    res.sendFile('signup.html', { root: __dirname });
+    res.sendFile('dist/signup.html', { root: __dirname });
 })
 
-app.use('/.netlify/functions/api', router);
+// app.use('/.netlify/functions/api', router);
 
-// app.listen(8000);
+app.listen(port);
 
 
 
