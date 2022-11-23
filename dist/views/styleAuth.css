@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    cursor: default;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    background-color: rgba(18, 19, 32, 0.927);
+    box-shadow: 0 0 5px 3px rgba(49, 49, 49, 0.959);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    width: 30%;
+    margin-left: 15px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+}
+
+#logo>a {
+    color: rgba(239, 248, 255, 0.936);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#logo>img {
+    width: 41px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+#loginDiv>img {
+    margin-right: 15px;
+    width: 30px;
+    cursor: pointer;
+}
+
+#loginDiv {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 50%;
+}
+
+#loginPage {
+    width: 150px;
+    height: 200px;
+    margin-top: 25px;
+    position: absolute;
+    display: none;
+    z-index: 1;
+    margin-right: 10px;
+}
+
+#logup {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(229, 229, 229, 0.639);
+    margin-top: 10px;
+    display: none;
+}
+
+#loginDiv>img:hover+#loginPage>#logup,
+#loginDiv>img:hover+#loginPage,
+#loginPage:hover,
+#logup:hover,
+#loginPage:hover>#logup {
+    display: block;
+}
+
+main {
+    width: 100%;
+    height: 80vh;
+    background-color: rgba(52, 50, 59, 0.164);
+}
+
+.main-page {
+    width: 70%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(46, 46, 63);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 0 5px 3px rgba(99, 99, 99, 0.959);
+}
+
+.main-page>h3 {
+    font-size: 34px;
+    color: rgb(218, 218, 218);
+    margin-bottom: 8px;
+    letter-spacing: 0.8px;
+    text-decoration: underline;
+}
+
+.main-page>form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+    margin-top: 15px;
+}
+
+.main-page>form>input {
+    width: 70%;
+    height: 40px;
+    margin: 0;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    color: rgb(83, 83, 83);
+    background-color: rgb(24, 24, 24);
+    border-radius: 5px;
+    padding: 0 10px;
+    cursor: text;
+}
+
+.main-page>form>input:focus {
+    background-color: rgba(80, 80, 80, 0.925);
+    color: rgb(0, 0, 0);
+    outline: black;
+}
+
+form>input:last-of-type {
+    width: 150px;
+    padding: 0;
+    color: rgb(190, 190, 190);
+    margin-top: 10px;
+}
+
+form>input:last-of-type:hover {
+    cursor: pointer;
+    background-color: rgba(61, 61, 61, 0.932);
+}
+
+.main-page>span {
+    color: rgb(145, 145, 145);
+    letter-spacing: 0.8px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.main-page>span>a {
+    color: rgba(255, 221, 157, 0.89);
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.eye-icon {
+    background-color: white;
+    margin-left: -30px;
+    cursor: text;
+}
+
+#login-page {
+    /* display: none;s */
+}
+
+#signup-page {
+    /* display: none; */
+}
+
+footer {
+    width: 100%;
+    height: 110px;
+    background-color: rgba(18, 19, 32, 0.927);
+    display: flex;
+    justify-content: center;
+    /* position: absolute;
+    bottom: 0; */
+}
+
+footer>#socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#social-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+#socials>p {
+    font-size: 18px;
+    color: rgb(129, 129, 129);
+}
+
+@media (max-width:500px) {
+    #logo {
+        font-size: 18px;
+    }
+    #logo>img {
+        width: 35px;
+        margin-left: 2px;
+    }
+    #loginDiv>img {
+        margin-right: 15px;
+        width: 24px;
+    }
+    .main-page>h3 {
+        font-size: 25px;
+    }
+    #form-sign>input {
+        font-size: 15px;
+        width: 90%;
+    }
+    #form-sign>input:last-of-type {
+        width: 50%;
+    }
+    #form-login>input {
+        font-size: 15px;
+        width: 90%;
+    }
+    #form-login>input:last-of-type {
+        width: 50%;
+    }
+    #dir-to-log {
+        font-size: 11px;
+    }
+    #dir-to-sign {
+        font-size: 11px;
+    }
+}
