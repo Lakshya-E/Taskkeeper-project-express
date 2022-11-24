@@ -84,7 +84,7 @@ app.post('/user-data', async(req, res) => {
             res.send('Registration Failed');
         }
     } catch (err) {
-        res.status(400).send(err);
+        res.status(400).send("Registration Failed, Please Fill all The Feilds Correctly");
     }
 })
 
