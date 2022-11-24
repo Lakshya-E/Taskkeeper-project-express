@@ -95,6 +95,27 @@ main {
     background-color: rgba(52, 50, 59, 0.164);
 }
 
+#main404 {
+    margin: 30px 20px;
+    height: auto;
+    min-height: calc(59.5vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main404>h1 {
+    color: orange;
+    font-size: 70px;
+}
+
+#main404>p {
+    color: rgba(43, 43, 43, 0.769);
+    font-size: 22px;
+    letter-spacing: 1.5px;
+}
+
 .main-page {
     width: 70%;
     position: relative;

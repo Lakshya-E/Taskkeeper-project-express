@@ -34,7 +34,7 @@ app.use(express.static('JS'));
 let id = 0;
 let userName = "";
 
-app.get('/', auth.isLogout, (req, res) => {
+const backToHome = app.get('/', auth.isLogout, (req, res) => {
     res.render('index');
 })
 
@@ -99,9 +99,10 @@ app.post('/user-login', async(req, res) => {
         if (emailConst.name === name && emailConst.password === password) {
             id = emailConst._id;
             userName = emailConst.name;
-            // nameGetter(id);
+
             req.session.user_id = emailConst._id;
             res.status(201).redirect('/home');
+
         } else if (emailConst.name != name) {
             res.status(404).render('login', { message: 'Incorrect Details' });
         } else {
@@ -117,16 +118,6 @@ app.post('/user-login', async(req, res) => {
     }
 })
 
-function nameGetter(id) {
-    id = Data.findOne({ _id: id });
-    console.log(id.name);
-}
-
-
-
-
-
-
-app.get('/*', auth.isLogin, (req, res) => {
-    res.render('index');
+app.get('/*', (req, res) => {
+    res.render('404', { backToHome });
 })
