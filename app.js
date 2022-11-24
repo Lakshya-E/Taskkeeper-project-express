@@ -78,13 +78,9 @@ app.post('/user-data', async(req, res) => {
 
         if (userRegister) {
             res.status(201).render('signup', { message: 'Registration is complete' });
-        } else if (typeof userRegister.name === 'ValidatorError') {
-            res.send('Enter name');
-        } else {
-            res.send('Registration Failed');
         }
     } catch (err) {
-        res.status(400).send("Registration Failed, Please Fill all The Feilds Correctly");
+        res.status(400).render('signup', { message: 'Registration Failed, Please Fill all The Feilds Correctly' });
     }
 })
 
