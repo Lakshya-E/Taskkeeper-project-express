@@ -6,7 +6,7 @@ if (localStorage.getItem("data")) {
 
 let signBtn = document.getElementById("submit-signup");
 if (signBtn != null) {
-    signBtn.addEventListener("click", signFunc);
+    // signBtn.addEventListener("click", signFunc);
 
     let names = document.getElementById("username-sign");
     let email = document.getElementById("email-sign");
@@ -53,8 +53,8 @@ if (signBtn != null) {
             localStorage.setItem("data", JSON.stringify(data));
 
             console.log(data);
-            alert("You have Signed In! ^_^")
-            reloadpage();
+            // alert("You have Signed In! ^_^")
+            // reloadpage();
         }
     }
 }
@@ -63,7 +63,7 @@ console.log(signBtn)
 
 let loginBtn = document.getElementById('submit-log');
 if (loginBtn != null) {
-    loginBtn.addEventListener("click", loginFunc);
+    // loginBtn.addEventListener("click", loginFunc);
 
     let namesLog = document.getElementById("username-login");
     let emailLog = document.getElementById("email-login");

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partial/head_logup.ejs')%>
+
+    <body>
+        <%- include('./partial/nav_logup.ejs')%>
+
+            <main>
+                <div class="main-page" id="login-page">
+                    <h3>LOGIN!</h3>
+                    <div class="signedinmsg">
+
+                        <%if(typeof message !== 'undefined'){%>
+                            <p>
+                                <%=message%>
+                            </p>
+                            <%}%>
+                    </div>
+                    <form id="form-login" action="/user-login" method="POST">
+                        <input type="text" id="username-login" placeholder="Name" name="name" />
+                        <br/>
+                        <input type="email" id="email-login" placeholder="Email" name="email" />
+                        <br/>
+                        <input type="password" id="password-login" name="password" placeholder="Password" alt="Include an Uppercase Letter" />
+                        <i class="eye-icon"></i>
+                        <br/>
+                        <input type="submit" id="submit-log" value="Login" />
+                    </form>
+                    <span id="dir-to-sign">Not SignedUp Already? <a href="signup" id="dir-em-sign">SignUp Here!</a></span>
+                </div>
+            </main>
+
+            <%- include('./partial/footer.ejs')%>
+
+                <script type="text/javascript" src="/auth.js"></script>
+    </body>
+
+</html>

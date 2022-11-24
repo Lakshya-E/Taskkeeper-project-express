@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('./partial/head.ejs')%>
+
+    <body>
+        <%- include('./partial/nav.ejs')%>
+            <main>
+                <div id="MainDiv">
+                    <div id="TaskBox">
+                        <h2><b>TASK LIST</b></h2>
+                        <p id="para1">Add tasks to your list by typing to the right and pressing enter or clicking on Add Task button. You may then view pending tasks below!</p>
+
+                        <div id="checkboxes">
+                        </div>
+
+                    </div>
+
+                    <div id="textArea">
+                        <input type="text" id="txt" placeholder="My Task is to..."></textarea>
+                        <!-- <input type="text" id="yourTasks" placeholder="I need to...">
+            <br/> -->
+                        <input type="button" id="btn1" value="Add Task" onclick="funcOnClick()">
+                    </div>
+                </div>
+            </main>
+
+            <%- include('./partial/footer.ejs')%>
+
+                <script type="text/javascript" src="/script.js"></script>
+    </body>
+
+</html>
