@@ -17,10 +17,13 @@
                     </div>
 
                     <div id="textArea">
-                        <input type="text" id="txt" placeholder="My Task is to..."></textarea>
-                        <!-- <input type="text" id="yourTasks" placeholder="I need to...">
-            <br/> -->
-                        <input type="button" id="btn1" value="Add Task" onclick="funcOnClick()">
+                        <p id="errorValid">Please Enter Something</p>
+                        <form id="inputData-form" action="/add-items" method="POST">
+                            <input type="text" id="txt" placeholder="I need to..." min="1">
+                            <br/>
+                            <input type="button" id="btn1" value="Add Task" onclick="funcOnClick()">
+                        </form>
+
                     </div>
                 </div>
             </main>

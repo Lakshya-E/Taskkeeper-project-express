@@ -170,6 +170,10 @@ main {
 #textArea {
     margin: 40px 40px;
     width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
 }
 
 #textArea #txt {
@@ -180,6 +184,10 @@ main {
     resize: none;
     outline: none;
     font-weight: bold;
+}
+
+#errorValid {
+    color: rgba(255, 221, 157, 0.89);
 }
 
 #btn1 {

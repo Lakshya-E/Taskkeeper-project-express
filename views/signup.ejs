@@ -18,11 +18,11 @@
                             <%}%>
                     </div>
                     <form id="form-sign" action="/user-data" method="POST">
-                        <input type="text" id="username-sign" placeholder="Name" name="name" />
+                        <input type="text" id="username-sign" placeholder="Name" name="name" min="1" max="30" />
                         <br/>
-                        <input type="email" id="email-sign" placeholder="Email" name="email" />
+                        <input type="email" id="email-sign" placeholder="Email" name="email" min="5" max="50" />
                         <br/>
-                        <input type="password" id="password-sign" placeholder="Password" name="password" />
+                        <input type="password" id="password-sign" placeholder="Password" name="password" min="8" max="25" />
                         <br/>
                         <input type="submit" id="submit-signup" value="Sign Up" />
                     </form>

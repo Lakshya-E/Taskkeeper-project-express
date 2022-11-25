@@ -1,14 +1,37 @@
+const { validate } = require("../models/userData");
+
 let toDoItem = document.getElementById("txt");
 
 toDoItem.addEventListener("keydown", function(e) {
     if (e.key == 'Enter') {
         funcOnClick();
-        afterEnter();
     }
 })
 
 function afterEnter() {
     toDoItem.value = null;
+}
+
+const userForm = document.addEventListener("inputData-form");
+userForm.noValidate = true;
+
+userForm.addEventListener("submit", validateForm);
+
+function validateForm(event) {
+    const form = event.target;
+    if (!toDoItem.value) {
+        event.preventDefault();
+        Array.from(form.elements).forEach(i => {
+            if (i.checkValidity()) {
+                // field is valid - remove class
+                i.parentElement.classList.remove('invalid');
+            } else {
+                // field is invalid - add class
+                i.parentElement.classList.add('invalid');
+            }
+        });
+    }
+
 }
 
 function funcOnClick() {

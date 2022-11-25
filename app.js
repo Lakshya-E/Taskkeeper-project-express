@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 mongoose.connect(mongodb).then(() => {
     console.log('connected');
     app.listen(port, () => {
-        console.log('Listening on Port: 8000')
+        console.log(`Listening on Port: ${port}`);
     })
 }).catch(err => console.log(err));
 
